@@ -24,14 +24,22 @@
       "locality": "Koramangala",
       "current_lat": 12.9353,
       "current_lng": 77.62377,
-      "wallet_inr": 65.1,
-      "avg_spend": 193,
+      "wallet_inr": 0,
+      "avg_spend": 210,
       "declared_preferences": "cafe, cold brew, sandwiches, salon, restaurant",
-      "observed_signals": "1 visits to restaurant (South Dosa House), active recent customer, high local retention",
+      "observed_signals": "2 visits to salon (Studio Eleven), active recent customer, high local retention",
       "marketing_consent": true,
       "minutes_available": 30,
       "intent": "iced cold brew and croissants",
       "visit_history": [
+        {
+          "merchant_id": "m_044",
+          "merchant_name": "Studio Eleven",
+          "category": "salon",
+          "discount_pct": 15,
+          "amount_spent_inr": 249.9,
+          "timestamp": "2026-10-10T12:16:19.861Z"
+        },
         {
           "merchant_id": "m_015",
           "merchant_name": "South Dosa House",
@@ -68,7 +76,7 @@
       "created_at": "2026-10-10T09:17:02.466Z",
       "temp_c": 34,
       "condition": "sunny",
-      "updated_at": "2026-10-10T12:02:49.084Z",
+      "updated_at": "2026-10-10T12:16:19.863Z",
       "userId": "c_001",
       "password": "password123"
     },
@@ -6834,7 +6842,7 @@
       "lat": 12.93377,
       "lng": 77.62556,
       "capacity": 13,
-      "occupancy_pct": 89,
+      "occupancy_pct": 94,
       "inventory_signal": "surplus",
       "max_discount_pct": 15,
       "min_margin_pct": 20,
@@ -6843,7 +6851,7 @@
       "open_hour": 9,
       "close_hour": 21,
       "notified_count": 5,
-      "redeemed_count": 1
+      "redeemed_count": 2
     },
     "m_045": {
       "id": "m_045",
@@ -8204,7 +8212,7 @@
         "time_formatted": "03:15 pm",
         "day_of_week": "Saturday"
       },
-      "status": "superseded",
+      "status": "redeemed",
       "created_at": "2026-10-10T09:45:53.958Z",
       "gemini_draft": {
         "subject": "Priya, your refreshing escape awaits! ☀️ 15% Off at Studio Eleven (35 mins left!)",
@@ -8225,7 +8233,8 @@
         "status": "DELIVERED",
         "preview_url": "https://ethereal.email/message/asoEzEYSGgV8TZBNasoJaJ0L.yTpAxDAAAAAAv0ogH.XH7-pmayJHAtgzAY"
       },
-      "superseded_at": "2026-10-10T09:59:13.644Z"
+      "superseded_at": "2026-10-10T09:59:13.644Z",
+      "redeemed_at": "2026-10-10T12:16:19.861Z"
     },
     {
       "offer_id": "off_1791624435668_a80t",
@@ -8384,6 +8393,18 @@
     }
   ],
   "redemptions": [
+    {
+      "redemption_id": "red_1791634579863",
+      "offer_id": "off_1791625553958_idwx",
+      "merchant_id": "m_044",
+      "merchant_name": "Studio Eleven",
+      "customer_id": "c_001",
+      "customer_name": "Priya",
+      "discount_pct": 15,
+      "final_price_inr": 249.9,
+      "profit_inr": 121.43,
+      "timestamp": "2026-10-10T12:16:19.863Z"
+    },
     {
       "redemption_id": "red_1791633769084",
       "offer_id": "off_1791633654710_b2qt",
