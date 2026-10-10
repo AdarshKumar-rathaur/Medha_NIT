@@ -24,14 +24,30 @@
       "locality": "Koramangala",
       "current_lat": 12.9353,
       "current_lng": 77.62377,
-      "wallet_inr": 450,
-      "avg_spend": 205,
-      "declared_preferences": "cafe, cold brew, sandwiches",
-      "observed_signals": "2 visits to cafe (Little Fern Café), active recent customer, high local retention",
+      "wallet_inr": 65.1,
+      "avg_spend": 193,
+      "declared_preferences": "cafe, cold brew, sandwiches, salon, restaurant",
+      "observed_signals": "1 visits to restaurant (South Dosa House), active recent customer, high local retention",
       "marketing_consent": true,
       "minutes_available": 30,
       "intent": "iced cold brew and croissants",
       "visit_history": [
+        {
+          "merchant_id": "m_015",
+          "merchant_name": "South Dosa House",
+          "category": "restaurant",
+          "discount_pct": 10,
+          "amount_spent_inr": 135,
+          "timestamp": "2026-10-10T12:02:49.084Z"
+        },
+        {
+          "merchant_id": "m_044",
+          "merchant_name": "Studio Eleven",
+          "category": "salon",
+          "discount_pct": 15,
+          "amount_spent_inr": 249.9,
+          "timestamp": "2026-10-10T11:52:33.884Z"
+        },
         {
           "merchant_id": "m_001",
           "merchant_name": "Little Fern Café",
@@ -52,7 +68,7 @@
       "created_at": "2026-10-10T09:17:02.466Z",
       "temp_c": 34,
       "condition": "sunny",
-      "updated_at": "2026-10-10T09:59:13.696Z",
+      "updated_at": "2026-10-10T12:02:49.084Z",
       "userId": "c_001",
       "password": "password123"
     },
@@ -6267,7 +6283,7 @@
       "lat": 12.93491,
       "lng": 77.62339,
       "capacity": 33,
-      "occupancy_pct": 67,
+      "occupancy_pct": 72,
       "inventory_signal": "healthy",
       "max_discount_pct": 10,
       "min_margin_pct": 18,
@@ -6275,8 +6291,8 @@
       "unit_cost_inr": 115,
       "open_hour": 9,
       "close_hour": 23,
-      "notified_count": 0,
-      "redeemed_count": 0
+      "notified_count": 1,
+      "redeemed_count": 1
     },
     "m_016": {
       "id": "m_016",
@@ -6818,7 +6834,7 @@
       "lat": 12.93377,
       "lng": 77.62556,
       "capacity": 13,
-      "occupancy_pct": 84,
+      "occupancy_pct": 89,
       "inventory_signal": "surplus",
       "max_discount_pct": 15,
       "min_margin_pct": 20,
@@ -6827,7 +6843,7 @@
       "open_hour": 9,
       "close_hour": 21,
       "notified_count": 5,
-      "redeemed_count": 0
+      "redeemed_count": 1
     },
     "m_045": {
       "id": "m_045",
@@ -7896,6 +7912,86 @@
   },
   "offers": [
     {
+      "offer_id": "off_1791633654710_b2qt",
+      "scenario_id": "rec_c_001_28",
+      "action": "send",
+      "reason": "Context and commercial rules allow a grounded offer. Optimal profit at 10% discount.",
+      "offer": {
+        "merchant_id": "m_015",
+        "discount_pct": 10,
+        "item_id": "i_015_1",
+        "final_price_inr": 135,
+        "valid_minutes": 30
+      },
+      "notification": {
+        "title": "South Dosa House: 10% off on Masala dosa",
+        "body": "Enjoy Masala dosa at South Dosa House for ₹135. Just a 1 min walk away.",
+        "language": "en",
+        "cta": "Claim offer"
+      },
+      "ui_hints": {
+        "distance_m": 60,
+        "walk_minutes": 1,
+        "weather_note": "28°C clear / sunny"
+      },
+      "profit_estimate_inr": 63.17,
+      "ml_details": {
+        "predicted_p_accept": 0.6564,
+        "unit_margin_inr": 96.24,
+        "item_base_price": 150
+      },
+      "customer": {
+        "id": "c_001",
+        "name": "Priya",
+        "email": "priya@priority-member.in",
+        "locality": "Koramangala",
+        "wallet_inr": 200.1
+      },
+      "merchant": {
+        "id": "m_015",
+        "name": "South Dosa House",
+        "category": "restaurant",
+        "locality": "Koramangala",
+        "occupancy_pct": 67
+      },
+      "context": {
+        "timestamp": "2026-10-10T12:00:47.606Z",
+        "lat": 12.9353,
+        "lng": 77.62377,
+        "temp_c": 28,
+        "condition": "clear / sunny",
+        "rain_mm": 0,
+        "minutes_available": 30,
+        "intent": "iced cold brew and croissants",
+        "window_label": "Evening Leisure & Dinner Window (5:00 – 9:30 PM)",
+        "time_formatted": "05:30 pm",
+        "day_of_week": "Saturday"
+      },
+      "status": "redeemed",
+      "created_at": "2026-10-10T12:00:54.710Z",
+      "gemini_draft": {
+        "subject": "☕ South Dosa House: Exclusive 10% off just for you!",
+        "previewText": "Just 1 min away. Enjoy your break with a fresh treat at ₹135.",
+        "headline": "A Curated Treat from South Dosa House",
+        "tone": "Warm, context-aware, hyper-local marketing offer",
+        "targetAudiencePersona": "Priya (Locality: Koramangala, Intent: iced cold brew and croissants)",
+        "rationale": "Selected 10% discount at South Dosa House maximizing expected merchant profit (₹63.17) while honoring 1 min walk budget.",
+        "plainText": "Hi Priya,\n\nWe noticed you're just 1 minute(s) away from South Dosa House! \n\nSince it's 30°C and sunny outside, here is an exclusive flash offer to brighten your break:\n• Discount: 10% OFF\n• Final Price: ₹135\n• Proximity: Only 1 min walk (60m)\n• Validity: Valid for the next 30 minutes only!\n\nClaim your offer now: Claim offer\n\nHave a great rest of your day!\nTeam Medha Decision Offers",
+        "htmlBody": "\n<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #0f172a; color: #f8fafc; border-radius: 16px; overflow: hidden; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);\">\n  <div style=\"background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); padding: 32px 28px; text-align: center;\">\n    <span style=\"background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); color: #ffffff; padding: 6px 14px; border-radius: 9999px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;\">\n      Personalized Flash Offer\n    </span>\n    <h1 style=\"color: #ffffff; margin: 16px 0 8px 0; font-size: 26px; font-weight: 800; line-height: 1.2;\">A Curated Treat from South Dosa House</h1>\n    <p style=\"color: #e0e7ff; margin: 0; font-size: 15px;\">Tailored for Priya • Just 1 min walk away</p>\n  </div>\n\n  <div style=\"padding: 28px 24px;\">\n    <p style=\"font-size: 16px; line-height: 1.6; color: #cbd5e1; margin-top: 0;\">\n      Hi <strong>Priya</strong>, beat the 30°C heat with a refreshing recharge! We've unlocked an exclusive offer at <strong>South Dosa House</strong>.\n    </p>\n\n    <!-- Offer Card -->\n    <div style=\"background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin: 24px 0; display: block;\">\n      <table style=\"width: 100%; border-collapse: collapse;\">\n        <tr>\n          <td>\n            <div style=\"font-size: 13px; text-transform: uppercase; color: #94a3b8; font-weight: 600;\">Special Price</div>\n            <div style=\"font-size: 32px; font-weight: 800; color: #10b981;\">₹135</div>\n          </td>\n          <td style=\"text-align: right;\">\n            <div style=\"background-color: #065f46; color: #34d399; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 8px; display: inline-block;\">\n              10% DISCOUNT\n            </div>\n          </td>\n        </tr>\n      </table>\n\n      <div style=\"margin-top: 16px; padding-top: 16px; border-top: 1px dashed #475569; font-size: 14px; color: #94a3b8;\">\n        <span>📍 <strong>60m</strong> distance</span> &bull; \n        <span>⏳ Valid for next <strong>30 mins</strong></span> &bull; \n        <span>🎯 Category: <strong>restaurant</strong></span>\n      </div>\n    </div>\n\n    <div style=\"text-align: center; margin: 32px 0 20px 0;\">\n      <a href=\"#\" style=\"background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 16px; display: inline-block; box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.4);\">\n        Claim offer &rarr;\n      </a>\n    </div>\n\n    <p style=\"font-size: 13px; color: #64748b; text-align: center; margin-bottom: 0;\">\n      Reason grounded by ML Model: <em>Context and commercial rules allow a grounded offer. Optimal profit at 10% discount.</em>\n    </p>\n  </div>\n\n  <div style=\"background-color: #090d16; padding: 18px 24px; text-align: center; border-top: 1px solid #1e293b; font-size: 12px; color: #64748b;\">\n    Moment IQ Decision Engine &bull; Grounded Real-Time Decisioning &bull; Powered by Gemini AI\n  </div>\n</div>",
+        "is_live_gemini": false,
+        "model_used": "heuristic-template-engine",
+        "generated_at": "2026-10-10T12:00:59.988Z",
+        "ai_warning": "Gemini API returned error: {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}. Showing high-fidelity template draft."
+      },
+      "email_delivery": {
+        "message_id": "<ca8a1337-6c4d-bb9c-23b6-ae449be2a2c8@medha-ai.internal>",
+        "sent_at": "2026-10-10T12:01:03.767Z",
+        "status": "DELIVERED",
+        "preview_url": "https://ethereal.email/message/asoo3UYSGgV8UQfmasoo.rJrKujo9LmlAAAAATy8negb6JwkMUqJ3b0NHuI"
+      },
+      "redeemed_at": "2026-10-10T12:02:49.084Z"
+    },
+    {
       "offer_id": "off_1791626327209_v6ak",
       "scenario_id": "rec_c_001_30",
       "action": "send",
@@ -7951,7 +8047,7 @@
         "time_formatted": "03:28 pm",
         "day_of_week": "Saturday"
       },
-      "status": "active",
+      "status": "redeemed",
       "created_at": "2026-10-10T09:58:47.209Z",
       "gemini_draft": {
         "subject": "Priya, Your 30-Min Escape: 15% Off Salon Special at Studio Eleven!",
@@ -7971,7 +8067,8 @@
         "sent_at": "2026-10-10T09:59:13.644Z",
         "status": "DELIVERED",
         "preview_url": "https://ethereal.email/message/asoKVUYSGgV8TgZ0asoMcFz99noLdkuPAAAAAmXZRsTd2lOjE5bTlYbm3zo"
-      }
+      },
+      "redeemed_at": "2026-10-10T11:52:33.884Z"
     },
     {
       "offer_id": "off_1791625833662_m2da",
@@ -8288,6 +8385,30 @@
   ],
   "redemptions": [
     {
+      "redemption_id": "red_1791633769084",
+      "offer_id": "off_1791633654710_b2qt",
+      "merchant_id": "m_015",
+      "merchant_name": "South Dosa House",
+      "customer_id": "c_001",
+      "customer_name": "Priya",
+      "discount_pct": 10,
+      "final_price_inr": 135,
+      "profit_inr": 63.17,
+      "timestamp": "2026-10-10T12:02:49.084Z"
+    },
+    {
+      "redemption_id": "red_1791633153884",
+      "offer_id": "off_1791626327209_v6ak",
+      "merchant_id": "m_044",
+      "merchant_name": "Studio Eleven",
+      "customer_id": "c_001",
+      "customer_name": "Priya",
+      "discount_pct": 15,
+      "final_price_inr": 249.9,
+      "profit_inr": 129.51,
+      "timestamp": "2026-10-10T11:52:33.884Z"
+    },
+    {
       "redemption_id": "red_1791626353696",
       "offer_id": "off_001",
       "merchant_id": "m_001",
@@ -8311,5 +8432,86 @@
       "profit_inr": 40,
       "timestamp": "2026-10-10T09:18:05.763Z"
     }
-  ]
+  ],
+  "catalogs": {
+    "m_001": [
+      {
+        "id": "i_001_1",
+        "merchant_id": "m_001",
+        "title": "Iced Coffee & Lunch Bowl",
+        "category": "lunch",
+        "price_inr": 150,
+        "unit_cost_inr": 32.29,
+        "stock_units": 16,
+        "prep_minutes": 8,
+        "is_veg": true,
+        "tags": [
+          "lunch",
+          "cold",
+          "vegetarian",
+          "quick"
+        ],
+        "description": "Fresh Mediterranean quinoa salad bowl paired with single-origin slow cold brew.",
+        "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
+        "is_active": true
+      },
+      {
+        "id": "i_001_2",
+        "merchant_id": "m_001",
+        "title": "Cold Brew Coffee (Bottled 300ml)",
+        "category": "drink",
+        "price_inr": 150,
+        "unit_cost_inr": 32.29,
+        "stock_units": 24,
+        "prep_minutes": 3,
+        "is_veg": true,
+        "tags": [
+          "drink",
+          "cold",
+          "specialty"
+        ],
+        "description": "18-hour steeped Chikmagalur dark roast coffee served chilled over ice.",
+        "image_url": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80",
+        "is_active": true
+      },
+      {
+        "id": "i_001_3",
+        "merchant_id": "m_001",
+        "title": "Paneer Toastie on Sourdough",
+        "category": "snack",
+        "price_inr": 150,
+        "unit_cost_inr": 35,
+        "stock_units": 12,
+        "prep_minutes": 7,
+        "is_veg": true,
+        "tags": [
+          "snack",
+          "vegetarian",
+          "warm"
+        ],
+        "description": "Marinated cottage cheese with cilantro chutney pressed in house-baked sourdough.",
+        "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80",
+        "is_active": true
+      },
+      {
+        "id": "i_001_4",
+        "merchant_id": "m_001",
+        "title": "Artisan Berry Granola Bowl",
+        "category": "breakfast",
+        "price_inr": 180,
+        "unit_cost_inr": 45,
+        "stock_units": 8,
+        "prep_minutes": 5,
+        "is_veg": true,
+        "tags": [
+          "healthy",
+          "snack",
+          "vegetarian"
+        ],
+        "description": "Greek yogurt with rolled oats, toasted pumpkin seeds, and blueberry compote.",
+        "image_url": "https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=600&q=80",
+        "is_active": true
+      }
+    ]
+  }
 }

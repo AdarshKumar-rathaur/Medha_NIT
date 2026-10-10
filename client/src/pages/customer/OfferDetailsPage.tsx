@@ -86,7 +86,7 @@ export const OfferDetailsPage: React.FC = () => {
     setIsRedeeming(true)
     try {
       const res = await ApiClient.redeemOffer(offer.id, user?.id || 'c_001')
-      setOffer(res.offer)
+      setOffer((prev) => ({ ...(prev || {}), ...(res.offer || {}) } as PersonalizedOffer))
       setRedemptionResult(res.redemption)
       setIsRedeemConfirmOpen(false)
       success(`Offer confirmed! Show verification code ${res.redemption.verification_code} to the merchant.`)

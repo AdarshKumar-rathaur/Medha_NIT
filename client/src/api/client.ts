@@ -52,16 +52,16 @@ export class ApiClient {
 
         if (!response.ok) {
           const errData = await response.json().catch(() => ({}))
-          throw new Error(errData.message || `API Error: ${response.status} ${response.statusText}`)
+          const errorMsg = errData.message || errData.error || `API Error: ${response.status} ${response.statusText}`
+          throw new Error(errorMsg)
         }
 
         return (await response.json()) as T
       } catch (err: unknown) {
-        if (attempt === retries) {
-          console.warn(`[API Client] Endpoint ${endpoint} failed after retries. Falling back to MockAdapter.`, err)
+        if (attempt === retries || (err instanceof Error && err.message.includes('API Error: 4'))) {
           throw err
         }
-        await new Promise((r) => setTimeout(r, 400 * (attempt + 1)))
+        await new Promise((r) => setTimeout(r, 200 * (attempt + 1)))
       }
     }
 

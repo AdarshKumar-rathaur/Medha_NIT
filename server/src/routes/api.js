@@ -28,6 +28,9 @@ import {
   getMerchant,
   updateMerchant,
   getCatalog,
+  addCatalogItem,
+  updateCatalogItem,
+  deleteCatalogItem,
   getMerchantRecommendations,
   updateRecommendationStatus,
   getMerchantAnalytics,
@@ -86,6 +89,9 @@ router.post('/email/send', sendEmail);
 router.post('/email/queue', queueEmail);
 router.post('/email/process-queue', processQueue);
 router.get('/email/queue', getQueue);
+router.delete('/email/queue', clearQueue);
+router.get('/email/history', getHistory);
+
 // Standardized REST endpoints for Frontend Application
 router.get('/customers/:id', getCustomer);
 router.put('/customers/:id', updateCustomer);
@@ -99,6 +105,9 @@ router.post('/offers/:id/redeem', redeemOffer);
 router.get('/merchants/:id', getMerchant);
 router.put('/merchants/:id', updateMerchant);
 router.get('/merchants/:id/catalog', getCatalog);
+router.post('/merchants/:id/catalog', addCatalogItem);
+router.put('/merchants/:id/catalog/:itemId', updateCatalogItem);
+router.delete('/merchants/:id/catalog/:itemId', deleteCatalogItem);
 router.get('/merchants/:id/recommendations', getMerchantRecommendations);
 router.patch('/recommendations/:id/status', updateRecommendationStatus);
 router.get('/merchants/:id/analytics', getMerchantAnalytics);

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
+import { ApiClient } from '@/api/client'
 
 interface DemoContextType {
   isDemoMode: boolean
@@ -19,7 +20,9 @@ interface DemoContextType {
 const DemoContext = createContext<DemoContextType | undefined>(undefined)
 
 export const DemoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isDemoMode, setIsDemoMode] = useState<boolean>(true)
+  const [isDemoMode, setIsDemoMode] = useState<boolean>(() => {
+    return localStorage.getItem('dos_demo_mode') === 'true'
+  })
   const [locality, setLocality] = useState<string>('Koramangala')
   const [scenario, setScenario] = useState({
     time: '1:15 PM',
@@ -28,6 +31,31 @@ export const DemoProvider: React.FC<{ children: React.ReactNode }> = ({ children
     weather: 'Sunny',
     minutesAvailable: 20,
   })
+
+  // Synchronize ApiClient mode
+  React.useEffect(() => {
+    ApiClient.setDemoMode(isDemoMode)
+    localStorage.setItem('dos_demo_mode', String(isDemoMode))
+  }, [isDemoMode])
+
+  // Fetch live Bangalore telemetry on mount
+  React.useEffect(() => {
+    async function syncLiveContext() {
+      try {
+        const tel = await ApiClient.getLiveTelemetry()
+        if (tel) {
+          setScenario({
+            time: tel.time_formatted || '1:15 PM',
+            day: tel.day_of_week || 'Tuesday',
+            temperature: `${tel.temp_c || 33}°C`,
+            weather: tel.condition ? (tel.condition.charAt(0).toUpperCase() + tel.condition.slice(1)) : 'Sunny',
+            minutesAvailable: 25,
+          })
+        }
+      } catch {}
+    }
+    syncLiveContext()
+  }, [])
 
   const toggleDemoMode = () => {
     setIsDemoMode((prev) => !prev)

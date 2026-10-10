@@ -50,7 +50,7 @@ export const MerchantOffers: React.FC = () => {
   const handleStatusChange = async (recId: string, status: 'approved' | 'rejected' | 'paused') => {
     try {
       const updated = await ApiClient.updateRecommendationStatus(recId, status)
-      setRecommendations((prev) => prev.map((r) => (r.id === recId ? updated : r)))
+      setRecommendations((prev) => prev.map((r) => (r.id === recId ? { ...r, ...updated, recommendation_status: status } : r)))
       success(`Campaign status set to ${status}.`)
     } catch {
       error('Failed to update status')

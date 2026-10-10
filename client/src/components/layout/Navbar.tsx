@@ -30,7 +30,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onMobileMenuToggle, isMobileMenuOpen }) => {
   const { user, role, switchDemoRole, logout } = useAuth()
-  const { locality, setLocality, isDemoMode, currentScenario, resetDemoData } = useDemo()
+  const { locality, setLocality, isDemoMode, toggleDemoMode, currentScenario, resetDemoData } = useDemo()
   const navigate = useNavigate()
   const [showUserMenu, setShowUserMenu] = useState(false)
   const [showNotifMenu, setShowNotifMenu] = useState(false)
@@ -77,9 +77,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onMobileMenuToggle, isMobileMenu
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
-          <Badge variant="teal" className="text-[11px] py-0 px-2 font-mono">
-            {isDemoMode ? 'Demo Mode Active' : 'Production API'}
-          </Badge>
+          <button
+            onClick={toggleDemoMode}
+            className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold transition-all cursor-pointer ${
+              !isDemoMode
+                ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30'
+                : 'bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30'
+            }`}
+            title="Click to toggle between Live ML Backend and Demo Simulation"
+          >
+            <span className={`w-2 h-2 rounded-full ${!isDemoMode ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
+            <span>{!isDemoMode ? 'Live ML Backend' : 'Demo Mode'}</span>
+            <span className="text-[9px] text-slate-400 underline ml-0.5">Toggle</span>
+          </button>
           <button
             onClick={resetDemoData}
             title="Reset simulated changes"

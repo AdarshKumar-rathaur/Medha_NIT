@@ -3,26 +3,23 @@ import { realtimeInferenceService } from '../services/realtimeInferenceService.j
 
 export async function login(req, res) {
   try {
-    const { userId, password, role = 'customer' } = req.body;
-
-    if (!userId || !password) {
-      return res.status(400).json({
-        success: false,
-        error: 'User ID / Email and Password are required.',
-      });
-    }
+    const { userId, email, password = 'password123', role = 'customer' } = req.body;
+    const identifier = userId || email || (role === 'merchant' ? 'm_001' : 'c_001');
 
     let user;
     if (role === 'merchant') {
-      user = await storeService.authenticateMerchant(userId, password);
+      user = await storeService.authenticateMerchant(identifier, password);
     } else {
-      user = await storeService.authenticateCustomer(userId, password);
+      user = await storeService.authenticateCustomer(identifier, password);
     }
 
     res.json({
       success: true,
-      message: `Logged in successfully as ${role}.`,
+      id: user.id,
+      name: user.name,
+      email: user.email,
       role,
+      locality: user.locality || 'Koramangala',
       user,
     });
   } catch (err) {

@@ -115,7 +115,7 @@ export const MerchantDashboard: React.FC = () => {
     try {
       const updated = await ApiClient.updateRecommendationStatus(recId, nextStatus)
       setRecommendations((prev) =>
-        prev.map((r) => (r.id === recId ? updated : r))
+        prev.map((r) => (r.id === recId ? { ...r, ...updated, recommendation_status: nextStatus } : r))
       )
       success(`Offer recommendation status updated to ${nextStatus}.`)
     } catch (err: any) {

@@ -77,11 +77,15 @@ export const CustomerProfile: React.FC = () => {
           age: data.age,
           locality: data.locality,
           wallet_inr: data.wallet_inr,
-          price_sensitivity: data.price_sensitivity,
-          declared_preferences: data.declared_preferences.join(', '),
-          dietary_preferences: data.dietary_preferences.join(', '),
-          max_travel_distance_m: data.max_travel_distance_m,
-          minutes_available: data.minutes_available,
+          price_sensitivity: data.price_sensitivity ?? 0.65,
+          declared_preferences: Array.isArray(data.declared_preferences)
+            ? data.declared_preferences.join(', ')
+            : String(data.declared_preferences || 'cafe, bakery'),
+          dietary_preferences: Array.isArray(data.dietary_preferences)
+            ? data.dietary_preferences.join(', ')
+            : String(data.dietary_preferences || 'Vegetarian'),
+          max_travel_distance_m: data.max_travel_distance_m || 600,
+          minutes_available: data.minutes_available || 20,
           language: data.language,
           notification_email: data.notification_email,
           notification_sms: data.notification_sms,
