@@ -1,0 +1,18 @@
+{
+  "name": "decisioned-offer-system",
+  "version": "1.0.0",
+  "description": "End-to-end Decisioned Offer System with React Frontend, Express Backend, Gemini AI Drafts, and Nodemailer Services",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "node server/src/server.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build:client": "npm run build --prefix client",
+    "ml:evaluate": "python ml_engine/run_ml_pipeline.py",
+    "ml:test": "python ml_engine/test_ml_pipeline.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "_comment": "Decisioned Offer ML Pipeline - Feature Input Configuration File. Edit any values below and run `python test_ml_pipeline.py`.",
+  "mode": "scenario",
+  "scenario": {
+    "description": "Priya's Tuesday - Koramangala Lunch Break Demo",
+    "customer": {
+      "id": "c_001",
+      "age": 26.0,
+      "wallet_inr": 400.0,
+      "avg_spend": 260.0,
+      "price_sensitivity": 0.65,
+      "churn_risk": 0.20,
+      "locality": "Koramangala",
+      "current_lat": 12.9353,
+      "current_lng": 77.62377,
+      "declared_preferences": "cafe, desserts, healthy bowls, continental",
+      "observed_signals": "3 restaurant visits this week, open to nearby discovery",
+      "marketing_consent": true
+    },
+    "merchant": {
+      "id": "m_001",
+      "name": "Little Fern Café",
+      "category": "cafe",
+      "lat": 12.9360,
+      "lng": 77.6247,
+      "locality": "Koramangala",
+      "occupancy_pct": 18.0,
+      "capacity": 30.0,
+      "inventory_signal": "healthy",
+      "max_discount_pct": 20.0,
+      "min_margin_pct": 13.0,
+      "base_price_inr": 150.0,
+      "unit_cost_inr": 32.29,
+      "open_hour": 8.0,
+      "close_hour": 22.0,
+      "promo_start_hour": 13.0,
+      "promo_end_hour": 15.0,
+      "weekdays_only": true
+    },
+    "item": {
+      "id": "i_001_2",
+      "title": "Cold brew coffee & artisanal lunch bowl",
+      "price_inr": 150.0,
+      "prep_minutes": 8.0,
+      "is_veg": true,
+      "stock_units": 15.0
+    },
+    "context": {
+      "timestamp": "2026-05-19T13:15:00+05:30",
+      "lat": 12.9353,
+      "lng": 77.62377,
+      "minutes_available": 20.0,
+      "wallet_override": 400.0,
+      "temp_c": 33.0,
+      "condition": "sunny",
+      "rain_mm": 0.0,
+      "intent": "quick lunch",
+      "festival_boost_pct": 0.0
+    },
+    "offer_discount_pct": 10.0
+  },
+  "raw_features_override": {
+    "_info": "Set any specific raw feature here to override calculated values, or leave empty {}",
+    "distance_m": null,
+    "temp_c": null,
+    "offer_discount_pct": null,
+    "user_wallet_inr": null
+  },
+  "presets": {
+    "priya_tuesday": {
+      "description": "Baseline: Sunny 33°C, 20m break, ₹400 wallet, 140m walk, 10% discount",
+      "temp_c": 33.0,
+      "minutes_available": 20.0,
+      "wallet_inr": 400.0,
+      "offer_discount_pct": 10.0,
+      "rain_mm": 0.0
+    },
+    "heavy_rain_slump": {
+      "description": "Heavy monsoon rain (12mm rain, 24°C): Hot beverage/cafe affinity spikes",
+      "temp_c": 24.0,
+      "condition": "rainy",
+      "rain_mm": 12.0,
+      "minutes_available": 35.0,
+      "offer_discount_pct": 15.0
+    },
+    "budget_stress": {
+      "description": "Low wallet balance (₹100) vs ₹150 item: Hard budget guardrail check",
+      "wallet_inr": 100.0,
+      "wallet_override": 100.0,
+      "offer_discount_pct": 10.0
+    },
+    "time_crunch": {
+      "description": "Only 5 minutes available: Distance and prep time stress guardrail check",
+      "minutes_available": 5.0,
+      "offer_discount_pct": 10.0
+    },
+    "aggressive_discount_20": {
+      "description": "Max permitted discount (20%): Evaluates marginal profit vs acceptance gain",
+      "offer_discount_pct": 20.0
+    }
+  }
+}

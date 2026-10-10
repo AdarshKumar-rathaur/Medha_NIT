@@ -292,8 +292,18 @@ class OfferResponsePredictor:
     @classmethod
     def load(cls, filepath: str) -> "OfferResponsePredictor":
         data = joblib.load(filepath)
-        predictor = cls(model_type=data.get("model_type", "xgboost"))
-        predictor.model = data["model"]
-        predictor.calibrated_model = data["calibrated_model"]
-        predictor.feature_names = data["feature_names"]
+        if isinstance(data, dict):
+            predictor = cls(model_type=data.get("model_type", "xgboost"))
+            predictor.model = data.get("model")
+            predictor.calibrated_model = data.get("calibrated_model")
+            predictor.feature_names = data.get("feature_names", list(cls.FEATURE_COLUMNS))
+        else:
+            predictor = cls(model_type="xgboost")
+            predictor.calibrated_model = data
+            predictor.model = getattr(data, "estimator", getattr(data, "base_estimator", None))
+            if hasattr(data, "feature_names_in_"):
+                predictor.feature_names = list(data.feature_names_in_)
+            else:
+                predictor.feature_names = list(cls.FEATURE_COLUMNS)
         return predictor
+

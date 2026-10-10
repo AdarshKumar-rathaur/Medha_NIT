@@ -80,7 +80,11 @@ class FeatureExtractor:
         # 2. Behavioral Features (User & Merchant)
         # ---------------------------------------------------------
         # User Spend & Economics
-        wallet = float(context.get("wallet_override") or customer.get("wallet_inr", 500.0))
+        wo = context.get("wallet_override")
+        if pd.notna(wo) and wo is not None:
+            wallet = float(wo)
+        else:
+            wallet = float(customer.get("wallet_inr", 500.0))
         avg_spend = float(customer.get("avg_spend", 250.0))
         price_sens = float(customer.get("price_sensitivity", 0.5))
         churn_risk = float(customer.get("churn_risk", 0.5))

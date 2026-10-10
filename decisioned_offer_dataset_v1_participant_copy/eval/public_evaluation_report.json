@@ -2,12 +2,12 @@
   "summary": {
     "groundedness": 1.0,
     "constraint": 1.0,
-    "decision_match": 0.879,
-    "localization": 0.694,
-    "has_profit": 0.387,
+    "decision_match": 0.871,
+    "localization": 0.911,
+    "has_profit": 0.823,
     "n_scenarios": 62,
     "n_submitted": 62,
-    "overall": 0.872
+    "overall": 0.935
   },
   "details": [
     {
@@ -309,75 +309,75 @@
     },
     {
       "scenario_id": "cur_extra_001",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_002",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_003",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_004",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
-      "groundedness": 1.0,
-      "constraint": 1.0,
-      "localization": 0.5
-    },
-    {
-      "scenario_id": "cur_extra_005",
-      "action": "skip",
-      "expected": "skip",
-      "decision_ok": 1.0,
-      "groundedness": 1.0,
-      "constraint": 1.0,
-      "localization": 0.5
-    },
-    {
-      "scenario_id": "cur_extra_006",
-      "action": "skip",
-      "expected": "skip",
-      "decision_ok": 1.0,
-      "groundedness": 1.0,
-      "constraint": 1.0,
-      "localization": 0.5
-    },
-    {
-      "scenario_id": "cur_extra_007",
-      "action": "skip",
-      "expected": "send",
       "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
-      "scenario_id": "cur_extra_008",
-      "action": "skip",
+      "scenario_id": "cur_extra_005",
+      "action": "send",
       "expected": "skip",
+      "decision_ok": 0.5,
+      "groundedness": 1.0,
+      "constraint": 1.0,
+      "localization": 1.0
+    },
+    {
+      "scenario_id": "cur_extra_006",
+      "action": "send",
+      "expected": "skip",
+      "decision_ok": 0.5,
+      "groundedness": 1.0,
+      "constraint": 1.0,
+      "localization": 1.0
+    },
+    {
+      "scenario_id": "cur_extra_007",
+      "action": "send",
+      "expected": "send",
       "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
+    },
+    {
+      "scenario_id": "cur_extra_008",
+      "action": "send",
+      "expected": "skip",
+      "decision_ok": 0.5,
+      "groundedness": 1.0,
+      "constraint": 1.0,
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_009",
@@ -390,75 +390,75 @@
     },
     {
       "scenario_id": "cur_extra_010",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_011",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_012",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_013",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_014",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_015",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_016",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_017",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_018",
@@ -471,102 +471,102 @@
     },
     {
       "scenario_id": "cur_extra_019",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_020",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_021",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_022",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_023",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
+      "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_024",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_025",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_026",
-      "action": "skip",
+      "action": "send",
       "expected": "skip",
-      "decision_ok": 1.0,
+      "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
       "scenario_id": "cur_extra_027",
-      "action": "skip",
+      "action": "send",
       "expected": "send",
-      "decision_ok": 0.5,
-      "groundedness": 1.0,
-      "constraint": 1.0,
-      "localization": 0.5
-    },
-    {
-      "scenario_id": "cur_extra_028",
-      "action": "skip",
-      "expected": "skip",
       "decision_ok": 1.0,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
     },
     {
-      "scenario_id": "cur_extra_029",
-      "action": "skip",
-      "expected": "send",
+      "scenario_id": "cur_extra_028",
+      "action": "send",
+      "expected": "skip",
       "decision_ok": 0.5,
       "groundedness": 1.0,
       "constraint": 1.0,
-      "localization": 0.5
+      "localization": 1.0
+    },
+    {
+      "scenario_id": "cur_extra_029",
+      "action": "send",
+      "expected": "send",
+      "decision_ok": 1.0,
+      "groundedness": 1.0,
+      "constraint": 1.0,
+      "localization": 1.0
     }
   ]
 }
